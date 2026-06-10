@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Geometría desde cero: material interactivo de geometría básica para 2º ESO. Figuras planas, perímetros, áreas, Pitágoras, cuerpos y volúmenes.">
+  <title>Geometría desde cero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="cabecera">
+    <div class="cabecera-inner">
+      <div class="marca">
+        <img src="CITE-STEAM IA logo.png" alt="Logo del proyecto CITE-STEAM IA" class="logo">
+        <div class="marca-txt">
+          <h1>Geometría <span>desde cero</span></h1>
+          <p class="subtitulo">Matemáticas · 2.º ESO</p>
+        </div>
+      </div>
+      <div class="progreso-cab">
+        <span id="progreso-texto" class="progreso-texto">0/6 secciones</span>
+        <div class="barra" aria-hidden="true"><div id="barra-rell" class="barra-rell"></div></div>
+      </div>
+    </div>
+    <nav class="menu" aria-label="Secciones">
+      <button class="nav-btn" data-goto="inicio">Inicio</button>
+      <button class="nav-btn" data-goto="b1">1 · Figuras</button>
+      <button class="nav-btn" data-goto="b2">2 · Perímetro y área</button>
+      <button class="nav-btn" data-goto="b3">3 · Compuestas</button>
+      <button class="nav-btn" data-goto="b4">4 · Pitágoras</button>
+      <button class="nav-btn" data-goto="b5">5 · Cuerpos</button>
+      <button class="nav-btn" data-goto="medida">Mídelo tú</button>
+      <button class="nav-btn destacar" data-goto="reto">🏁 Reto final</button>
+      <button class="nav-btn" data-goto="profe">Para el profe</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ INICIO ============ -->
+    <section id="inicio" class="seccion activa">
+      <div class="hero">
+        <div class="hero-txt">
+          <p class="pildora">Geometría básica · interactiva</p>
+          <h2>Aprende geometría <strong>paso a paso</strong> y midiendo el mundo real.</h2>
+          <p class="lead">Cinco bloques sencillos, ejercicios que se corrigen solos y tareas para medir objetos de tu clase. Tu progreso se guarda en este dispositivo.</p>
+          <div class="hero-cta">
+            <button class="btn btn-grande" data-goto="b1">Empezar por el bloque 1 →</button>
+            <button class="btn btn-fantasma" data-goto="reto">Ir al reto final</button>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="90" height="60" rx="6" class="f-rell"/>
+            <circle cx="180" cy="60" r="35" class="f-rell2"/>
+            <polygon points="60,180 20,120 110,120" class="f-rell3"/>
+            <polygon points="150,180 210,180 195,120 165,120" class="f-rell"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="autoria tarjeta">
+        <img src="CITE-STEAM IA logo.png" alt="Logo CITE-STEAM IA" class="autoria-logo">
+        <div>
+          <p><strong>Profesora:</strong> Cristina Ramos García</p>
+          <p>Proyecto CITE-STEAM «IA, FP y robótica inclusiva»</p>
+          <p>Programa Innovated</p>
+        </div>
+      </div>
+
+      <div class="grid-bloques">
+        <button class="mini-bloque" data-goto="b1"><span class="num">1</span> Figuras planas</button>
+        <button class="mini-bloque" data-goto="b2"><span class="num">2</span> Perímetros y áreas</button>
+        <button class="mini-bloque" data-goto="b3"><span class="num">3</span> Figuras compuestas</button>
+        <button class="mini-bloque" data-goto="b4"><span class="num">4</span> Teorema de Pitágoras</button>
+        <button class="mini-bloque" data-goto="b5"><span class="num">5</span> Cuerpos y volúmenes</button>
+        <button class="mini-bloque medir" data-goto="medida"><span class="num">📏</span> Mídelo tú</button>
+      </div>
+    </section>
+
+    <!-- ============ BLOQUE 1: FIGURAS PLANAS ============ -->
+    <section id="b1" class="seccion">
+      <p class="kicker">Bloque 1</p>
+      <h2 class="titulo-seccion">Figuras planas y sus elementos</h2>
+      <p class="intro">Estas son las figuras que vamos a usar. Fíjate en sus <strong>elementos</strong>: lados, vértices, base, altura, diagonal, radio y diámetro.</p>
+
+      <div class="galeria">
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 160 120" role="img" aria-label="Triángulo con base y altura"><polygon points="20,100 140,100 95,30" class="f-rell"/><line x1="95" y1="30" x2="95" y2="100" class="aux"/><line x1="20" y1="108" x2="140" y2="108" class="cota"/><text x="80" y="118" class="lbl">base</text><text x="100" y="70" class="lbl">altura</text></svg>
+          <figcaption><strong>Triángulo</strong><br>3 lados · 3 vértices · base y altura</figcaption>
+        </figure>
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 160 120" role="img" aria-label="Cuadrado con diagonal"><rect x="40" y="20" width="80" height="80" class="f-rell"/><line x1="40" y1="100" x2="120" y2="20" class="aux"/><text x="62" y="70" class="lbl">diagonal</text></svg>
+          <figcaption><strong>Cuadrado</strong><br>4 lados iguales · 4 vértices · diagonal</figcaption>
+        </figure>
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 160 120" role="img" aria-label="Rectángulo con base y altura"><rect x="25" y="30" width="110" height="60" class="f-rell"/><text x="70" y="108" class="lbl">base</text><text x="138" y="65" class="lbl">altura</text></svg>
+          <figcaption><strong>Rectángulo</strong><br>lados iguales 2 a 2 · base y altura</figcaption>
+        </figure>
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 160 120" role="img" aria-label="Rombo con diagonales"><polygon points="80,15 135,60 80,105 25,60" class="f-rell"/><line x1="80" y1="15" x2="80" y2="105" class="aux"/><line x1="25" y1="60" x2="135" y2="60" class="aux"/><text x="86" y="60" class="lbl">diagonales</text></svg>
+          <figcaption><strong>Rombo</strong><br>4 lados iguales · 2 diagonales</figcaption>
+        </figure>
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 160 120" role="img" aria-label="Romboide"><polygon points="40,90 110,90 130,40 60,40" class="f-rell"/><text x="80" y="105" class="lbl">base</text></svg>
+          <figcaption><strong>Romboide</strong><br>lados iguales 2 a 2 · base y altura</figcaption>
+        </figure>
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 160 120" role="img" aria-label="Trapecio"><polygon points="30,95 130,95 105,35 55,35" class="f-rell"/><text x="75" y="110" class="lbl">base mayor</text></svg>
+          <figcaption><strong>Trapecio</strong><br>solo 2 lados paralelos</figcaption>
+        </figure>
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 160 120" role="img" aria-label="Círculo con radio y diámetro"><circle cx="80" cy="60" r="42" class="f-rell2"/><line x1="80" y1="60" x2="122" y2="60" class="aux"/><line x1="38" y1="60" x2="122" y2="60" class="cota"/><circle cx="80" cy="60" r="3" class="pt"/><text x="88" y="52" class="lbl">radio</text><text x="55" y="80" class="lbl">diámetro</text></svg>
+          <figcaption><strong>Círculo</strong><br>radio · diámetro (= 2 × radio)</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="titulo-act">Comprueba lo que sabes</h3>
+      <div class="ejercicio quiz" data-id="b1q1" data-bloque="b1" data-correcta="rombo">
+        <p class="enunciado">¿Qué figura tiene <strong>4 lados iguales</strong> pero <strong>no</strong> tiene los ángulos rectos como el cuadrado?</p>
+        <div class="opciones">
+          <button class="opcion" data-val="rectangulo">Rectángulo</button>
+          <button class="opcion" data-val="rombo">Rombo</button>
+          <button class="opcion" data-val="trapecio">Trapecio</button>
+        </div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio quiz" data-id="b1q2" data-bloque="b1" data-correcta="diametro">
+        <p class="enunciado">En un círculo, el segmento que pasa por el centro y va de un borde al otro se llama…</p>
+        <div class="opciones">
+          <button class="opcion" data-val="radio">Radio</button>
+          <button class="opcion" data-val="diametro">Diámetro</button>
+          <button class="opcion" data-val="diagonal">Diagonal</button>
+        </div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio quiz" data-id="b1q3" data-bloque="b1" data-correcta="3">
+        <p class="enunciado">¿Cuántos <strong>vértices</strong> tiene un triángulo?</p>
+        <div class="opciones">
+          <button class="opcion" data-val="2">2</button>
+          <button class="opcion" data-val="3">3</button>
+          <button class="opcion" data-val="4">4</button>
+        </div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="captura" data-captura="b1" hidden>📸 ¡Bloque 1 completado! <strong>Haz captura de pantalla para entregar.</strong></div>
+      <div class="nav-pasos"><button class="btn btn-fantasma" data-goto="inicio">← Inicio</button><button class="btn" data-goto="b2">Bloque 2 →</button></div>
+    </section>
+
+    <!-- ============ BLOQUE 2: PERÍMETROS Y ÁREAS ============ -->
+    <section id="b2" class="seccion">
+      <p class="kicker">Bloque 2</p>
+      <h2 class="titulo-seccion">Perímetros y áreas</h2>
+      <div class="aviso-clave">
+        <div><span class="emoji">🟦</span><strong>Perímetro</strong> = el borde de la figura. Se mide en cm, m… (longitud)</div>
+        <div><span class="emoji">🟩</span><strong>Área</strong> = la superficie de dentro. Se mide en cm², m²… (superficie)</div>
+      </div>
+
+      <h3 class="titulo-act">Fórmulas que usaremos</h3>
+      <div class="galeria">
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 160 100" role="img" aria-label="Cuadrado de lado l"><rect x="45" y="15" width="70" height="70" class="f-rell"/><text x="68" y="100" class="lbl">lado (l)</text></svg><figcaption><strong>Cuadrado</strong><br>P = 4 × l<br>A = l × l</figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 160 100" role="img" aria-label="Rectángulo"><rect x="25" y="25" width="110" height="55" class="f-rell"/><text x="65" y="95" class="lbl">base (b)</text></svg><figcaption><strong>Rectángulo</strong><br>P = 2 × (b + h)<br>A = b × h</figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 160 100" role="img" aria-label="Triángulo"><polygon points="20,85 140,85 90,20" class="f-rell"/><line x1="90" y1="20" x2="90" y2="85" class="aux"/></svg><figcaption><strong>Triángulo</strong><br>A = (b × h) ÷ 2</figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 160 100" role="img" aria-label="Círculo"><circle cx="80" cy="50" r="38" class="f-rell2"/><line x1="80" y1="50" x2="118" y2="50" class="aux"/></svg><figcaption><strong>Círculo</strong><br>P = 2 × π × r<br>A = π × r × r<br><small>(π ≈ 3,14)</small></figcaption></figure>
+      </div>
+
+      <h3 class="titulo-act">Ejercicios que se corrigen solos</h3>
+      <div class="ejercicio" data-id="b2e1" data-bloque="b2" data-respuesta="24" data-tol="0.1">
+        <p class="enunciado">Área de un <strong>rectángulo</strong> de base 6 cm y altura 4 cm.</p>
+        <div class="ej-input"><label>Área = <input type="number" inputmode="decimal" aria-label="Área en centímetros cuadrados"> cm²</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio" data-id="b2e2" data-bloque="b2" data-respuesta="20" data-tol="0.1">
+        <p class="enunciado">Perímetro de un <strong>cuadrado</strong> de lado 5 cm.</p>
+        <div class="ej-input"><label>Perímetro = <input type="number" inputmode="decimal" aria-label="Perímetro en centímetros"> cm</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio" data-id="b2e3" data-bloque="b2" data-respuesta="30" data-tol="0.1">
+        <p class="enunciado">Área de un <strong>triángulo</strong> de base 10 cm y altura 6 cm. <span class="pista">Pista: (b × h) ÷ 2</span></p>
+        <div class="ej-input"><label>Área = <input type="number" inputmode="decimal" aria-label="Área en centímetros cuadrados"> cm²</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio" data-id="b2e4" data-bloque="b2" data-respuesta="28.26" data-tol="0.5">
+        <p class="enunciado">Área de un <strong>círculo</strong> de radio 3 cm. Usa π ≈ 3,14. <span class="pista">Pista: π × r × r</span></p>
+        <div class="ej-input"><label>Área = <input type="number" inputmode="decimal" aria-label="Área en centímetros cuadrados"> cm²</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="captura" data-captura="b2" hidden>📸 ¡Bloque 2 completado! <strong>Haz captura de pantalla para entregar.</strong></div>
+      <div class="nav-pasos"><button class="btn btn-fantasma" data-goto="b1">← Bloque 1</button><button class="btn" data-goto="b3">Bloque 3 →</button></div>
+    </section>
+
+    <!-- ============ BLOQUE 3: FIGURAS COMPUESTAS ============ -->
+    <section id="b3" class="seccion">
+      <p class="kicker">Bloque 3</p>
+      <h2 class="titulo-seccion">Figuras compuestas</h2>
+      <p class="intro">Una figura rara se calcula <strong>descomponiéndola</strong> en rectángulos y triángulos. Calculas el área de cada trozo y <strong>los sumas</strong>. Si hay un hueco, lo <strong>restas</strong>.</p>
+
+      <div class="dos-col">
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 200 140" role="img" aria-label="Figura en forma de L dividida en dos rectángulos">
+            <rect x="20" y="20" width="120" height="50" class="f-rell"/>
+            <rect x="20" y="70" width="50" height="50" class="f-rell3"/>
+            <line x1="70" y1="20" x2="70" y2="120" class="div"/>
+            <text x="55" y="50" class="lbl">A</text><text x="40" y="100" class="lbl">B</text>
+          </svg>
+          <figcaption>Forma de L → rectángulo <strong>A</strong> + rectángulo <strong>B</strong></figcaption>
+        </figure>
+        <div>
+          <h3 class="titulo-act">Ejercicio guiado</h3>
+          <div class="ejercicio" data-id="b3e1" data-bloque="b3" data-respuesta="36" data-tol="0.1">
+            <p class="enunciado"><strong>A</strong> es un rectángulo de 8 × 3 cm. <strong>B</strong> es un rectángulo de 4 × 3 cm. Suma las dos áreas.</p>
+            <p class="pista">Paso 1: A = 8 × 3. Paso 2: B = 4 × 3. Paso 3: súmalas.</p>
+            <div class="ej-input"><label>Área total = <input type="number" inputmode="decimal"> cm²</label><button class="btn-check">Comprobar</button></div>
+            <p class="feedback" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="titulo-act">Ampliación: figura con hueco</h3>
+      <div class="dos-col">
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 200 140" role="img" aria-label="Rectángulo grande con un cuadrado hueco dentro">
+            <rect x="20" y="20" width="160" height="100" class="f-rell"/>
+            <rect x="70" y="55" width="40" height="40" class="hueco"/>
+            <text x="78" y="80" class="lbl">hueco</text>
+          </svg>
+          <figcaption>Rectángulo grande − cuadrado hueco</figcaption>
+        </figure>
+        <div class="ejercicio" data-id="b3e2" data-bloque="b3" data-respuesta="56" data-tol="0.1">
+          <p class="enunciado">El rectángulo grande mide 10 × 6 cm. Tiene un hueco cuadrado de 2 cm de lado. ¿Cuánta superficie queda?</p>
+          <p class="pista">Área grande − área del hueco.</p>
+          <div class="ej-input"><label>Área = <input type="number" inputmode="decimal"> cm²</label><button class="btn-check">Comprobar</button></div>
+          <p class="feedback" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="captura" data-captura="b3" hidden>📸 ¡Bloque 3 completado! <strong>Haz captura de pantalla para entregar.</strong></div>
+      <div class="nav-pasos"><button class="btn btn-fantasma" data-goto="b2">← Bloque 2</button><button class="btn" data-goto="b4">Bloque 4 →</button></div>
+    </section>
+
+    <!-- ============ BLOQUE 4: PITÁGORAS ============ -->
+    <section id="b4" class="seccion">
+      <p class="kicker">Bloque 4</p>
+      <h2 class="titulo-seccion">Teorema de Pitágoras</h2>
+      <div class="dos-col">
+        <figure class="tarjeta fig-card">
+          <svg viewBox="0 0 200 160" role="img" aria-label="Triángulo rectángulo con catetos b y c e hipotenusa a">
+            <polygon points="40,130 160,130 40,40" class="f-rell"/>
+            <rect x="40" y="115" width="15" height="15" class="recto"/>
+            <text x="90" y="148" class="lbl">cateto b</text>
+            <text x="14" y="90" class="lbl">cateto c</text>
+            <text x="108" y="80" class="lbl">hipotenusa a</text>
+          </svg>
+          <figcaption>Los lados del ángulo recto son los <strong>catetos</strong>. El lado largo es la <strong>hipotenusa</strong>.</figcaption>
+        </figure>
+        <div class="formula-grande">
+          <p>a² = b² + c²</p>
+          <p class="formula-sub">Hipotenusa: a = √(b² + c²)</p>
+          <p class="formula-sub">Cateto: b = √(a² − c²)</p>
+        </div>
+      </div>
+
+      <h3 class="titulo-act">Ejercicios guiados</h3>
+      <div class="ejercicio" data-id="b4e1" data-bloque="b4" data-respuesta="5" data-tol="0.1">
+        <p class="enunciado">Los catetos miden 3 cm y 4 cm. ¿Cuánto mide la <strong>hipotenusa</strong>? <span class="pista">√(3² + 4²) = √(9 + 16) = √25</span></p>
+        <div class="ej-input"><label>Hipotenusa = <input type="number" inputmode="decimal"> cm</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio" data-id="b4e2" data-bloque="b4" data-respuesta="10" data-tol="0.1">
+        <p class="enunciado">Los catetos miden 6 cm y 8 cm. ¿Cuánto mide la <strong>hipotenusa</strong>?</p>
+        <div class="ej-input"><label>Hipotenusa = <input type="number" inputmode="decimal"> cm</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio" data-id="b4e3" data-bloque="b4" data-respuesta="12" data-tol="0.1">
+        <p class="enunciado">La hipotenusa mide 13 cm y un cateto 5 cm. ¿Cuánto mide el <strong>otro cateto</strong>? <span class="pista">√(13² − 5²)</span></p>
+        <div class="ej-input"><label>Cateto = <input type="number" inputmode="decimal"> cm</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio" data-id="b4e4" data-bloque="b4" data-respuesta="10" data-tol="0.1">
+        <p class="enunciado">Una baldosa rectangular mide 6 cm de base y 8 cm de altura. ¿Cuánto mide su <strong>diagonal</strong>? <span class="pista">La diagonal es la hipotenusa de un triángulo rectángulo.</span></p>
+        <div class="ej-input"><label>Diagonal = <input type="number" inputmode="decimal"> cm</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="captura" data-captura="b4" hidden>📸 ¡Bloque 4 completado! <strong>Haz captura de pantalla para entregar.</strong></div>
+      <div class="nav-pasos"><button class="btn btn-fantasma" data-goto="b3">← Bloque 3</button><button class="btn" data-goto="b5">Bloque 5 →</button></div>
+    </section>
+
+    <!-- ============ BLOQUE 5: CUERPOS, EULER Y VOLÚMENES ============ -->
+    <section id="b5" class="seccion">
+      <p class="kicker">Bloque 5</p>
+      <h2 class="titulo-seccion">Cuerpos, Euler y volúmenes</h2>
+      <p class="intro">Los cuerpos tienen <strong>caras</strong>, <strong>aristas</strong> y <strong>vértices</strong>. Otros (cilindro, cono, esfera) tienen base y altura.</p>
+
+      <div class="galeria">
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 120 120" role="img" aria-label="Cubo"><polygon points="30,40 80,40 80,90 30,90" class="f-rell"/><polygon points="30,40 50,25 100,25 80,40" class="f-rell3"/><polygon points="80,40 100,25 100,75 80,90" class="f-rell2"/></svg><figcaption><strong>Cubo</strong></figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 120 120" role="img" aria-label="Ortoedro"><polygon points="20,45 85,45 85,90 20,90" class="f-rell"/><polygon points="20,45 40,28 105,28 85,45" class="f-rell3"/><polygon points="85,45 105,28 105,73 85,90" class="f-rell2"/></svg><figcaption><strong>Ortoedro</strong></figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 120 120" role="img" aria-label="Prisma triangular"><polygon points="30,90 75,90 52,50" class="f-rell"/><polygon points="52,50 75,90 95,75 72,38" class="f-rell2"/><polygon points="30,90 52,50 72,38 50,78" class="f-rell3"/></svg><figcaption><strong>Prisma</strong></figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 120 120" role="img" aria-label="Pirámide"><polygon points="30,90 90,90 60,30" class="f-rell"/><polygon points="60,30 90,90 75,82 60,30" class="f-rell2"/></svg><figcaption><strong>Pirámide</strong></figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 120 120" role="img" aria-label="Cilindro"><ellipse cx="60" cy="35" rx="30" ry="10" class="f-rell3"/><path d="M30,35 L30,85 A30,10 0 0,0 90,85 L90,35" class="f-rell"/><ellipse cx="60" cy="35" rx="30" ry="10" class="f-rell2" fill-opacity="0"/></svg><figcaption><strong>Cilindro</strong></figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 120 120" role="img" aria-label="Cono"><path d="M60,25 L88,88 A28,9 0 0,1 32,88 Z" class="f-rell"/><ellipse cx="60" cy="88" rx="28" ry="9" class="f-rell2" fill-opacity="0"/></svg><figcaption><strong>Cono</strong></figcaption></figure>
+        <figure class="tarjeta fig-card"><svg viewBox="0 0 120 120" role="img" aria-label="Esfera"><circle cx="60" cy="60" r="35" class="f-rell2"/><ellipse cx="60" cy="60" rx="35" ry="12" class="aux"/></svg><figcaption><strong>Esfera</strong></figcaption></figure>
+      </div>
+
+      <div class="aviso-clave">
+        <div><span class="emoji">🧮</span><strong>Fórmula de Euler</strong> (poliedros): <strong>Caras + Vértices = Aristas + 2</strong></div>
+        <div><span class="emoji">📦</span><strong>Volumen</strong> = área de la base × altura</div>
+      </div>
+
+      <h3 class="titulo-act">Practica</h3>
+      <div class="ejercicio" data-id="b5e1" data-bloque="b5" data-respuesta="12" data-tol="0.1">
+        <p class="enunciado">Un <strong>cubo</strong> tiene 6 caras y 8 vértices. Usando Euler (C + V = A + 2), ¿cuántas <strong>aristas</strong> tiene?</p>
+        <div class="ej-input"><label>Aristas = <input type="number" inputmode="numeric"></label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio quiz" data-id="b5q2" data-bloque="b5" data-correcta="cono">
+        <p class="enunciado">¿Cuál de estos es un <strong>cuerpo de revolución</strong> (se obtiene girando una figura plana)?</p>
+        <div class="opciones">
+          <button class="opcion" data-val="cubo">Cubo</button>
+          <button class="opcion" data-val="cono">Cono</button>
+          <button class="opcion" data-val="piramide">Pirámide</button>
+        </div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ejercicio" data-id="b5e3" data-bloque="b5" data-respuesta="30" data-tol="0.1">
+        <p class="enunciado"><strong>Volumen de un ortoedro.</strong> La base es un rectángulo de área 15 cm² y la altura es 2 cm. ¿Cuál es el volumen? <span class="pista">volumen = área de la base × altura</span></p>
+        <div class="ej-input"><label>Volumen = <input type="number" inputmode="decimal"> cm³</label><button class="btn-check">Comprobar</button></div>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="captura" data-captura="b5" hidden>📸 ¡Bloque 5 completado! <strong>Haz captura de pantalla para entregar.</strong></div>
+      <div class="nav-pasos"><button class="btn btn-fantasma" data-goto="b4">← Bloque 4</button><button class="btn" data-goto="medida">Mídelo tú →</button></div>
+    </section>
+
+    <!-- ============ MÍDELO TÚ ============ -->
+    <section id="medida" class="seccion">
+      <p class="kicker">Manos a la obra</p>
+      <h2 class="titulo-seccion">Mídelo tú 📏</h2>
+      <p class="intro"><em>«Las matemáticas también se miden y se tocan.»</em> Coge una regla o una cinta métrica, mide objetos de tu clase y del centro, escribe <strong>tus medidas</strong> y la web comprobará si has aplicado bien la fórmula. ¡Tus medidas no tienen por qué ser exactas!</p>
+      <p class="recordatorio">Recuerda: usa siempre la <strong>misma unidad</strong> antes de calcular (cm con cm).</p>
+
+      <div class="medida-card tarjeta">
+        <h3>🪑 El área de tu pupitre</h3>
+        <p>Mide el tablero de tu mesa (es un rectángulo). Es un <strong>área</strong> → multiplica base × altura.</p>
+        <div class="ejercicio medida" data-id="m1" data-bloque="medida" data-figura="rectangulo" data-magnitud="area" data-tol="80">
+          <div class="medida-inputs">
+            <label>Base (cm)<input type="number" class="m-base" inputmode="decimal"></label>
+            <label>Altura (cm)<input type="number" class="m-altura" inputmode="decimal"></label>
+            <label>Tu resultado (cm²)<input type="number" class="m-res" inputmode="decimal"></label>
+          </div>
+          <button class="btn-check-medida">Comprobar mi cálculo</button>
+          <p class="feedback" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="medida-card tarjeta">
+        <h3>📕 El perímetro de un libro</h3>
+        <p>Mide los lados de un libro o cuaderno. El <strong>perímetro</strong> es el borde → 2 × (base + altura).</p>
+        <div class="ejercicio medida" data-id="m2" data-bloque="medida" data-figura="rectangulo" data-magnitud="perimetro" data-tol="6">
+          <div class="medida-inputs">
+            <label>Base (cm)<input type="number" class="m-base" inputmode="decimal"></label>
+            <label>Altura (cm)<input type="number" class="m-altura" inputmode="decimal"></label>
+            <label>Tu resultado (cm)<input type="number" class="m-res" inputmode="decimal"></label>
+          </div>
+          <button class="btn-check-medida">Comprobar mi cálculo</button>
+          <p class="feedback" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="medida-card tarjeta">
+        <h3>🥫 El volumen de una lata o caja</h3>
+        <p>Coge una caja de tizas, un estuche o una caja de cartón (un ortoedro). El <strong>volumen</strong> = largo × ancho × alto.</p>
+        <div class="ejercicio medida" data-id="m3" data-bloque="medida" data-figura="ortoedro" data-magnitud="volumen" data-tol="120">
+          <div class="medida-inputs">
+            <label>Largo (cm)<input type="number" class="m-largo" inputmode="decimal"></label>
+            <label>Ancho (cm)<input type="number" class="m-ancho" inputmode="decimal"></label>
+            <label>Alto (cm)<input type="number" class="m-alto" inputmode="decimal"></label>
+            <label>Tu resultado (cm³)<input type="number" class="m-res" inputmode="decimal"></label>
+          </div>
+          <button class="btn-check-medida">Comprobar mi cálculo</button>
+          <p class="feedback" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="captura" data-captura="medida" hidden>📸 ¡Tareas de medida completadas! <strong>Haz captura de pantalla para entregar.</strong></div>
+      <div class="nav-pasos"><button class="btn btn-fantasma" data-goto="b5">← Bloque 5</button><button class="btn destacar" data-goto="reto">Ir al reto final 🏁</button></div>
+    </section>
+
+    <!-- ============ RETO FINAL ============ -->
+    <section id="reto" class="seccion">
+      <p class="kicker">Reto final</p>
+      <h2 class="titulo-seccion">🏁 Reto de 10 preguntas</h2>
+      <p class="intro">Preguntas mezcladas de todos los bloques. Responde y pulsa <strong>«Corregir reto»</strong> al final.</p>
+
+      <div id="reto-lista">
+        <div class="ejercicio quiz reto-item" data-id="r1" data-correcta="rombo"><p class="enunciado">1. Figura de 4 lados iguales sin ángulos rectos:</p><div class="opciones"><button class="opcion" data-val="cuadrado">Cuadrado</button><button class="opcion" data-val="rombo">Rombo</button><button class="opcion" data-val="trapecio">Trapecio</button></div><p class="feedback"></p></div>
+        <div class="ejercicio reto-item" data-id="r2" data-respuesta="20" data-tol="0.1"><p class="enunciado">2. Perímetro de un cuadrado de lado 5 cm (cm):</p><div class="ej-input"><label><input type="number" inputmode="decimal"></label></div><p class="feedback"></p></div>
+        <div class="ejercicio reto-item" data-id="r3" data-respuesta="24" data-tol="0.1"><p class="enunciado">3. Área de un rectángulo de 6 × 4 cm (cm²):</p><div class="ej-input"><label><input type="number" inputmode="decimal"></label></div><p class="feedback"></p></div>
+        <div class="ejercicio reto-item" data-id="r4" data-respuesta="15" data-tol="0.1"><p class="enunciado">4. Área de un triángulo de base 6 cm y altura 5 cm (cm²):</p><div class="ej-input"><label><input type="number" inputmode="decimal"></label></div><p class="feedback"></p></div>
+        <div class="ejercicio reto-item" data-id="r5" data-respuesta="56" data-tol="0.1"><p class="enunciado">5. Rectángulo de 10 × 6 cm con un hueco cuadrado de 2 cm de lado. Superficie que queda (cm²):</p><div class="ej-input"><label><input type="number" inputmode="decimal"></label></div><p class="feedback"></p></div>
+        <div class="ejercicio reto-item" data-id="r6" data-respuesta="5" data-tol="0.1"><p class="enunciado">6. Catetos de 3 y 4 cm. Hipotenusa (cm):</p><div class="ej-input"><label><input type="number" inputmode="decimal"></label></div><p class="feedback"></p></div>
+        <div class="ejercicio reto-item" data-id="r7" data-respuesta="12" data-tol="0.1"><p class="enunciado">7. Hipotenusa 13 cm, un cateto 5 cm. El otro cateto (cm):</p><div class="ej-input"><label><input type="number" inputmode="decimal"></label></div><p class="feedback"></p></div>
+        <div class="ejercicio quiz reto-item" data-id="r8" data-correcta="12"><p class="enunciado">8. Un cubo tiene 6 caras y 8 vértices. ¿Cuántas aristas?</p><div class="opciones"><button class="opcion" data-val="10">10</button><button class="opcion" data-val="12">12</button><button class="opcion" data-val="14">14</button></div><p class="feedback"></p></div>
+        <div class="ejercicio reto-item" data-id="r9" data-respuesta="40" data-tol="0.1"><p class="enunciado">9. Ortoedro: base de área 8 cm² y altura 5 cm. Volumen (cm³):</p><div class="ej-input"><label><input type="number" inputmode="decimal"></label></div><p class="feedback"></p></div>
+        <div class="ejercicio reto-item" data-id="r10" data-respuesta="1500" data-tol="20"><p class="enunciado">10. Tu pupitre mide 60 cm de base y 25 cm de altura. ¿Cuál es su área (cm²)?</p><div class="ej-input"><label><input type="number" inputmode="decimal"></label></div><p class="feedback"></p></div>
+      </div>
+
+      <div class="reto-acciones">
+        <button id="btn-corregir-reto" class="btn btn-grande">Corregir reto</button>
+        <button id="btn-rehacer-reto" class="btn btn-fantasma" hidden>Rehacer reto</button>
+      </div>
+      <div id="reto-resultado" class="reto-resultado" hidden></div>
+      <div class="captura" data-captura="reto" hidden>📸 ¡Reto terminado! <strong>Haz captura de pantalla para entregar.</strong></div>
+      <div class="nav-pasos"><button class="btn btn-fantasma" data-goto="medida">← Mídelo tú</button><button class="btn" data-accion="imprimir">🖨️ Imprimir ficha</button></div>
+    </section>
+
+    <!-- ============ PARA EL PROFE ============ -->
+    <section id="profe" class="seccion">
+      <p class="kicker">Para el profe</p>
+      <h2 class="titulo-seccion">Rúbrica y guía de sesiones</h2>
+
+      <h3 class="titulo-act">Rúbrica de evaluación (sobre 10)</h3>
+      <div class="tabla-wrap">
+        <table class="rubrica">
+          <thead><tr><th>Criterio</th><th>Excelente (2)</th><th>Adecuado (1)</th><th>Insuf. (0)</th></tr></thead>
+          <tbody>
+            <tr><td>1. Figuras y elementos</td><td>Identifica todas y nombra sus elementos</td><td>La mayoría con algún fallo</td><td>No distingue</td></tr>
+            <tr><td>2. Perímetros y áreas</td><td>Calcula las 4 figuras y distingue borde/superficie y cm/cm²</td><td>Errores puntuales o confunde unidades</td><td>No aplica fórmulas</td></tr>
+            <tr><td>3. Medida real y compuestas</td><td>Mide bien, misma unidad y descompone correctamente</td><td>Con ayuda o pequeños errores</td><td>No completa</td></tr>
+            <tr><td>4. Pitágoras</td><td>Calcula hipotenusa, cateto y una diagonal</td><td>Casos sencillos con algún error</td><td>No identifica catetos/hipotenusa</td></tr>
+            <tr><td>5. Cuerpos, Euler y reto</td><td>Cuenta C-A-V, Euler, volumen y reto ≥ 7/10</td><td>Con ayuda o reto 4-6/10</td><td>No completa</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="conversion">9-10 Sobresaliente · 7-8 Notable · 5-6 Suficiente · &lt;5 No superado. La nota la pone el profesorado a partir de las capturas + observación en clase.</p>
+
+      <h3 class="titulo-act">Guía de sesiones (4–5 clases de ~50 min)</h3>
+      <ol class="sesiones">
+        <li><strong>Sesión 1 — Figuras planas.</strong> Presentación de la web y la autoría. Figuras y elementos. Mini-test. Medir el perímetro del pupitre. → Captura B1.</li>
+        <li><strong>Sesión 2 — Perímetros y áreas.</strong> Borde/superficie, cm vs cm². Fórmulas y ejercicios. Tarea de medida: pupitre, libro, pizarra. → Captura B2 + medida.</li>
+        <li><strong>Sesión 3 — Figuras compuestas.</strong> Descomponer y sumar; ampliación con hueco. Medir el aula en L o un panel con recorte. → Captura B3.</li>
+        <li><strong>Sesión 4 — Pitágoras.</strong> Catetos e hipotenusa; diagonal de un folio/baldosa. Ejercicios guiados. → Captura B4.</li>
+        <li><strong>Sesión 5 — Cuerpos y reto final.</strong> Cuerpos, Euler, volumen = base × altura midiendo una caja/lata. Reto de 10 preguntas y ficha imprimible. → Captura B5 + reto + ficha.</li>
+      </ol>
+      <p class="conversion">Si solo hay 4 sesiones, fusiona S3 y S4 (compuestas + Pitágoras) y deja la ampliación con hueco como tarea voluntaria.</p>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="pie-inner">
+      <div class="pie-autoria">
+        <img src="CITE-STEAM IA logo.png" alt="Logo CITE-STEAM IA" class="pie-logo">
+        <div>
+          <p><strong>Profesora:</strong> Cristina Ramos García</p>
+          <p>Proyecto CITE-STEAM «IA, FP y robótica inclusiva» · Programa Innovated</p>
+        </div>
+      </div>
+      <div class="pie-acciones">
+        <button class="btn" data-accion="imprimir">🖨️ Imprimir ficha resumen</button>
+        <button class="btn btn-peligro" data-accion="reiniciar">🔄 Reiniciar progreso</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FICHA IMPRIMIBLE ============ -->
+  <div id="ficha-print" class="ficha-print" aria-hidden="true">
+    <div class="ficha-cab">
+      <img src="CITE-STEAM IA logo.png" alt="Logo CITE-STEAM IA">
+      <div>
+        <h2>Geometría desde cero — Ficha resumen</h2>
+        <p>Profesora: Cristina Ramos García · Proyecto CITE-STEAM «IA, FP y robótica inclusiva» · Programa Innovated</p>
+      </div>
+    </div>
+    <div class="ficha-datos">
+      <p>Nombre del alumno/a: ____________________________________________ Curso: __________ Fecha: ____________</p>
+    </div>
+    <div class="ficha-progreso">
+      <h3>Mi progreso</h3>
+      <p id="ficha-progreso-txt">—</p>
+    </div>
+    <div class="ficha-formulas">
+      <h3>Fórmulas clave</h3>
+      <ul>
+        <li>Perímetro cuadrado = 4 × lado · Área cuadrado = lado × lado</li>
+        <li>Perímetro rectángulo = 2 × (base + altura) · Área = base × altura</li>
+        <li>Área triángulo = (base × altura) ÷ 2</li>
+        <li>Círculo (π ≈ 3,14): Perímetro = 2 × π × r · Área = π × r × r</li>
+        <li>Pitágoras: a² = b² + c²</li>
+        <li>Euler: Caras + Vértices = Aristas + 2</li>
+        <li>Volumen = área de la base × altura</li>
+      </ul>
+    </div>
+    <div class="ficha-medida">
+      <h3>Lo que he medido</h3>
+      <table>
+        <thead><tr><th>Objeto del aula</th><th>Medidas</th><th>Resultado</th></tr></thead>
+        <tbody><tr><td>&nbsp;</td><td></td><td></td></tr><tr><td>&nbsp;</td><td></td><td></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
